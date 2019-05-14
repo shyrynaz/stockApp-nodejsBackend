@@ -1,0 +1,42 @@
+{
+  "name": "stock-recommendation",
+  "version": "1.0.0",
+  "description": "stockApp",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cloudant/cloudant": "^3.0.2",
+    "alpha-vantage-cli": "^1.0.8",
+    "app-root-path": "^2.1.0",
+    "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "cloudant-nano": "^6.7.0",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "cron": "^1.6.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.4.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.11",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "request": "^2.88.0",
+    "validator": "^10.11.0",
+    "watson-developer-cloud": "^3.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
