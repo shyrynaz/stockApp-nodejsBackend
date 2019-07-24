@@ -4,7 +4,7 @@ class CompanyInfoService {
    * fetching news articles of given symbol
    */
   async getCompanyInfo(symbol) {
-    const url = `https://api.iextrading.com/1.0/stock/${symbol}/news`;
+    const url = `https://cloud.iexapis.com/stable/stock/${symbol}/news?token=${process.env.IEX_CLOUD_API}`;
     let response = await axios.get(url);
     const companyInfo = response.data;
     // console.log(companyInfo);
@@ -18,7 +18,7 @@ class CompanyInfoService {
    */
 
   async getChartData(symbol) {
-    const url = `https://api.iextrading.com/1.0/stock/${symbol}/chart/1m`;
+    const url = `https://cloud.iexapis.com/stable/stock/${symbol}/chart/1m?token=${process.env.IEX_CLOUD_API}`;
 
     let response = await axios.get(url);
     const chartData = response.data;

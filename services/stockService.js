@@ -14,7 +14,7 @@ class StockService {
       "YI",
       "ADBE"
     ];
-    const url = `https://api.iextrading.com/1.0/stock/market/batch?symbols=${symbols}&types=quote`;
+    const url = `https://cloud.iexapis.com/stable/stock/market/batch?symbols=${symbols}&types=quote&token=${process.env.IEX_CLOUD_API}`;
     let response = await axios.get(url);
 
     let stockData = response.data;
