@@ -18,7 +18,7 @@ class CompanyInfoService {
    */
 
   async getChartData(symbol) {
-    const url = `https://cloud.iexapis.com/stable/stock/${symbol}/chart/1m?token=${process.env.IEX_CLOUD_API}`;
+    const url = `https://cloud.iexapis.com/stable/stock/${symbol}/chart&range=1m&last=5?token=${process.env.IEX_CLOUD_API}`;
 
     let response = await axios.get(url);
     const chartData = response.data;
